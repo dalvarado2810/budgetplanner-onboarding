@@ -1,0 +1,8 @@
+<resources>
+    <string name="onboarding_step_one_title">Ajusta tus gastos mensuales</string>
+    <string name="onboarding_step_one_subtitle">Con esta app podrias planificar tus finanzas mensuales y llevar control sobre las mismas.</string>
+    <string name="onboarding_step_two_title">Agrupa tus ingresos y gastos</string>
+    <string name="onboarding_step_two_subtitle">Podrás agrupar todos tus movimientos por categoría para así tener un mejor panorama de como movilizas tu dinero</string>
+    <string name="onboarding_step_three_title">Tus datos están seguros</string>
+    <string name="onboarding_step_three_subtitle">Tus datos son locales, y están encryptados dentro de la aplicación. Solo tú verás tus datos.</string>
+</resources>
