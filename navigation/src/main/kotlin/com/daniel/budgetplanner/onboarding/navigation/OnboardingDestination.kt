@@ -10,4 +10,7 @@ sealed class OnboardingDestination : Destination() {
 
     @Serializable
     data object Onboarding : OnboardingDestination()
+
+    @Serializable
+    data object GetStarted : OnboardingDestination()
 }

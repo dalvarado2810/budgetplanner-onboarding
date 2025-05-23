@@ -7,6 +7,7 @@ import androidx.navigation.navigation
 import com.daniel.base.Product
 import com.daniel.budgetplanner.onboarding.di.onboardingModule
 import com.daniel.budgetplanner.onboarding.navigation.OnboardingDestination
+import com.daniel.budgetplanner.onboarding.presentation.getstarted.route.GetStartedRoute
 import com.daniel.budgetplanner.onboarding.presentation.steps.route.OnboardingRoute
 import org.koin.core.module.Module
 
@@ -16,7 +17,15 @@ object OnboardingProduct : Product() {
             startDestination = OnboardingDestination.Onboarding) {
                composable<OnboardingDestination.Onboarding> {
                    OnboardingRoute(
-                       onNavigateToGetStarted = {}
+                       onNavigateToGetStarted = {
+                           navController.navigate(OnboardingDestination.GetStarted)
+                       }
+                   )
+               }
+
+               composable<OnboardingDestination.GetStarted> {
+                   GetStartedRoute(
+                       onNavigateToDashboard = { }
                    )
                }
         }
