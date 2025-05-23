@@ -101,8 +101,8 @@ fun GetStartedContent(
                         uncheckedColor = Color.Black,
                     ),
                     checked = isPolicyCheck,
-                    onCheckedChange = {
-                        onPolicyChecked(it)
+                    onCheckedChange = { isCheck ->
+                        onPolicyChecked(isCheck)
                     }
                 )
 

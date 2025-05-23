@@ -15,7 +15,7 @@ fun ErrorDateDialog(
     )
 
     ModalBottomSheet(
-        onDismissRequest = {},
+        onDismissRequest = onDismissAction,
         sheetState = bottomSheetState,
     ) {
         DateMissedDialogContent {

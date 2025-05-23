@@ -94,7 +94,7 @@ fun GetStartedView (
             Spacer(modifier = Modifier.weight(1f))
 
             ContinueButton(
-                enabled = state.isNextButtonEnabled,
+                enabled = state.isPolicyCheck && state.name.isNotEmpty(),
                 text = stringResource(id = R.string.get_started_lets_begin)
             ) {
                 showDatePickerAction()
@@ -136,11 +136,11 @@ fun GetStartedViewPreview(){
     GetStartedView (
         state = GetStarted.State.Content(
             name = "Daniel",
-            isPolicyCheck = false,
+            isPolicyCheck = true,
             isNextButtonEnabled = false,
             isPolicyDialogShown = false,
             isDatePickerShown = false,
-            mustErrorDateDialogShown = false
+            mustErrorDateDialogShown = true
         ),
         onNameChange = { },
         dateSelectionAction = { start, end , name -> },

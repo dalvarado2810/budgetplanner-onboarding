@@ -41,7 +41,7 @@ fun TopShape(
             StepsData.StepOne -> {
                 ImageSteps(
                     image = step.image,
-                    pt = 80.dp,
+                    pt = 100.dp,
                     pb = 0.dp,
                     ps = 60.dp,
                     width = 260.dp,
@@ -52,7 +52,7 @@ fun TopShape(
             StepsData.StepTwo -> {
                 ImageSteps(
                     image = step.image,
-                    pt = 30.dp,
+                    pt = 50.dp,
                     pb = 25.dp,
                     ps = 60.dp,
                     width = 260.dp,
@@ -63,7 +63,7 @@ fun TopShape(
             StepsData.StepThree -> {
                 ImageSteps(
                     image = step.image,
-                    pt = 0.dp,
+                    pt = 30.dp,
                     pb = 0.dp,
                     ps = 40.dp,
                     width = 347.dp,
@@ -79,6 +79,6 @@ fun TopShape(
 fun TopShapePreview() {
     TopShape(
         modifier = Modifier,
-        step = StepsData.StepThree
+        step = StepsData.StepTwo
     )
 }

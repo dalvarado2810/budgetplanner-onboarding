@@ -25,13 +25,13 @@ fun GetStartedRoute(
     GetStartedScreen(
         state = viewState,
         onNameChangeAction = viewModel::onChangeNameAction,
-        showErrorDateDialogAction = {},
-        dismissErrorDateDialogAction = {},
-        showDatePickerAction = {},
-        dismissDatePickerAction = {},
-        showPolicyDialogAction = {},
-        dismissPolicyDialogAction = {},
-        onCheckPolicyAction = {},
+        showErrorDateDialogAction = viewModel::showErrorDateDialogAction,
+        dismissErrorDateDialogAction = viewModel::dismissErrorDateDialogAction,
+        showDatePickerAction = viewModel::showDatePickerAction,
+        dismissDatePickerAction = viewModel::dismissDatePickerAction,
+        showPolicyDialogAction = viewModel::showPolicyDialogAction,
+        dismissPolicyDialogAction = viewModel::dismissPolicyDialogAction,
+        onCheckPolicyAction = viewModel::onCheckPolicyAction,
         onDateSelectedAction = {start, end, name ->
             viewModel.dateSelectionAction(
                 startDate = start,
