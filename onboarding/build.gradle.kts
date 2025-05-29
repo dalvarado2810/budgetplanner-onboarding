@@ -82,4 +82,5 @@ dependencies {
 
     /* Base */
     implementation(libs.base)
+    implementation(libs.bundles.navigation.products)
 }

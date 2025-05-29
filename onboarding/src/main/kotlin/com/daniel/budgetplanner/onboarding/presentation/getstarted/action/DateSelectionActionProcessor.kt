@@ -1,6 +1,5 @@
 package com.daniel.budgetplanner.onboarding.presentation.getstarted.action
 
-import android.util.Log
 import com.daniel.base.domain.usecase.UseCaseState
 import com.daniel.base.presentation.Mutation
 import com.daniel.base.presentation.action.ActionProcessor
@@ -28,7 +27,8 @@ class DateSelectionActionProcessor(
             when(useCaseState) {
                 is UseCaseState.Data -> { currentState ->
                     currentState as GetStarted.State.Content
-                    Log.d("BUDGET",  "saved successfully now navigate")
+
+                    sideEffect(GetStarted.Effect.NavigateToDashboard)
                     currentState.copy(
                         isDatePickerShown = false
                     )
