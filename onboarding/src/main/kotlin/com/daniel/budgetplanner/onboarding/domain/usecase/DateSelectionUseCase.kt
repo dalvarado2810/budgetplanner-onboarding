@@ -16,7 +16,7 @@ class DateSelectionUseCase(
         require(params.startDate != null && params.endDate != null)
 
         storageRepository.apply {
-            setUser(params.name)
+            setUser(params.name.trim())
             setStartDate(params.startDate.toString())
             setEndDate(params.endDate.toString())
         }

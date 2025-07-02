@@ -12,6 +12,7 @@ compose = "1.8.1"
 navigation = "2.9.0"
 navigation-material = "1.8.1"
 koin = "3.5.6"
+dashboard-navigation = "1.0.0"
 
 [libraries]
 
@@ -46,6 +47,7 @@ navigation-material = { module = "androidx.compose.material:material-navigation"
 
 # Base
 base = { module = "com.daniel:base", version.ref = "base" }
+dashboard-navigation = { module = "com.daniel.budgetplanner:dashboard-navigation", version.ref = "dashboard-navigation"}
 
 [plugins]
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
@@ -58,3 +60,4 @@ compose = ["compose-material3", "compose-preview", "compose-ui-tooling"]
 navigation = ["navigation-compose", "navigation-material"]
 kotlin = ["kotlin-reflect", "kotlinx-serialization", "kotlinx-datetime"]
 koin = ["koin-android", "koin-android-compose"]
+navigation-products = ["dashboard-navigation"]

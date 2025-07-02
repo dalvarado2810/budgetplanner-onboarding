@@ -140,7 +140,7 @@ fun GetStartedViewPreview(){
             isNextButtonEnabled = false,
             isPolicyDialogShown = false,
             isDatePickerShown = false,
-            mustErrorDateDialogShown = true
+            mustErrorDateDialogShown = false
         ),
         onNameChange = { },
         dateSelectionAction = { start, end , name -> },

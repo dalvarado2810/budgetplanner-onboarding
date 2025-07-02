@@ -3,6 +3,7 @@ package com.daniel.budgetplanner.onboarding.presentation.getstarted.mvi
 import com.daniel.base.presentation.ViewAction
 import com.daniel.base.presentation.ViewEffect
 import com.daniel.base.presentation.ViewState
+import com.daniel.base.presentation.model.DoNotThrottle
 import java.time.LocalDate
 
 object GetStarted {
@@ -18,6 +19,7 @@ object GetStarted {
     }
 
     sealed class Action : ViewAction() {
+        @DoNotThrottle
         data class ChangeName(
             val name: String
         ) : Action()

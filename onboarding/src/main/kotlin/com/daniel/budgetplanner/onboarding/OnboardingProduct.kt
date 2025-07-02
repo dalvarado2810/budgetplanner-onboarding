@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.daniel.base.Product
+import com.daniel.budgetplanner.dashboard.navigation.DashboardDestination
 import com.daniel.budgetplanner.onboarding.di.onboardingModule
 import com.daniel.budgetplanner.onboarding.navigation.OnboardingDestination
 import com.daniel.budgetplanner.onboarding.presentation.getstarted.route.GetStartedRoute
@@ -25,7 +26,9 @@ object OnboardingProduct : Product() {
 
                composable<OnboardingDestination.GetStarted> {
                    GetStartedRoute(
-                       onNavigateToDashboard = { }
+                       onNavigateToDashboard = {
+                           navController.navigate(DashboardDestination.NavGraph)
+                       }
                    )
                }
         }

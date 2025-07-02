@@ -1,6 +1,5 @@
 package com.daniel.budgetplanner.onboarding.presentation.getstarted.action
 
-import android.util.Log
 import com.daniel.base.domain.usecase.UseCaseState
 import com.daniel.base.presentation.Mutation
 import com.daniel.base.presentation.action.ActionProcessor
@@ -8,8 +7,13 @@ import com.daniel.budgetplanner.onboarding.domain.usecase.DateSelectionUseCase
 import com.daniel.budgetplanner.onboarding.domain.usecase.error.DateSelectionUseCaseError
 import com.daniel.budgetplanner.onboarding.domain.usecase.params.DateSelectionParams
 import com.daniel.budgetplanner.onboarding.presentation.getstarted.mvi.GetStarted
+import com.daniel.budgetplanner.onboarding.ui.steps.utils.EFFECT_DELAY
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
 
 class DateSelectionActionProcessor(
     private val dateSelectionUseCase: DateSelectionUseCase
@@ -28,7 +32,11 @@ class DateSelectionActionProcessor(
             when(useCaseState) {
                 is UseCaseState.Data -> { currentState ->
                     currentState as GetStarted.State.Content
-                    Log.d("BUDGET",  "saved successfully now navigate")
+                    CoroutineScope(Dispatchers.IO).launch {
+                        delay(EFFECT_DELAY)
+                        sideEffect(GetStarted.Effect.NavigateToDashboard)
+                    }
+
                     currentState.copy(
                         isDatePickerShown = false
                     )
